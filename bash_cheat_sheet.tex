@@ -1,0 +1,92 @@
+
+%---------------------------%
+%----- Package imports -----%
+%---------------------------%
+\documentclass[12pt, a4paper]
+{article}
+\usepackage[utf8]{inputenc}		% Allow input to be UTF-8
+\usepackage[english]{babel}		% Alternative: 'norsk'
+\usepackage{graphicx}			% For importing graphics
+\usepackage{amsmath,			% All the useful AMS packages
+	amsthm, amsfonts, amssymb}
+\usepackage{mathtools}			% Fixes a few AMS bugs
+\usepackage{hyperref}			% For \href{URL}{text}
+\usepackage[margin=1.5cm,landscape]{geometry} % For margins and orientation
+\usepackage{enumitem}
+\usepackage{multicol}
+
+%---------------------------%
+%------ Package setup ------%
+%---------------------------%
+
+% Path to graphics
+\graphicspath{{figures/}}
+
+% Style of enumitem
+\renewcommand{\descriptionlabel}[1]{\Large \ttfamily \textbf{#1}}
+
+%---------------------------%
+%------ Misc settings ------%
+%---------------------------%
+
+% Paragraph skip
+\setlength{\parskip}{1ex}
+
+%---------------------------%
+%------ Document start -----%
+%---------------------------%
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+	{\Huge \bfseries \ttfamily Cheat sheet:} \hspace{1em}  \includegraphics[height=2cm]{bash_the_bourne_again_shell}
+\end{center}
+\vspace{1.25em}
+
+\begin{multicols}{3}
+\begin{center}
+	{\Large \bfseries \ttfamily First section} 
+\end{center}
+\vspace{0.5em}
+\hrule
+
+\begin{description}
+\item[abc] defgh
+\item[abc] defgh
+\item[abc] defgh
+\end{description}
+
+\vfill % Can be removed when cheat sheet has more content
+
+\begin{center}
+	{\Large \bfseries \ttfamily Second section} 
+\end{center}
+\vspace{0.5em}
+\hrule
+
+\begin{description}
+	\item[abc] defgh
+	\item[abc] defgh
+	\item[abc] defgh
+\end{description}
+
+\vfill % Can be removed when cheat sheet has more content
+
+\begin{center}
+	{\Large \bfseries \ttfamily Third section} 
+\end{center}
+\vspace{0.5em}
+\hrule
+
+\begin{description}
+	\item[abc] defgh
+	\item[abc] defgh
+	\item[abc] defgh
+\end{description}
+
+\hfill % Can be removed when cheat sheet has more content
+
+\end{multicols}
+\end{document}
+
+
