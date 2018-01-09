@@ -158,8 +158,36 @@
 \mybox[orange]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Redirecting}}
 
 \begin{description}[nolistsep]
+	\item[cat] Concatenate files
+	\item[sort] Sort lines of text
+	\item[uniq] Report or omit repeated lines
+	\item
+	\begin{tabular}{cl}
+		{\large \ttfamily \textbf{-d}} & Show duplicates
+	\end{tabular}
+	\item[wc] Newline, word and byte counts for each file
+	\item
+	\begin{tabular}{cl}
+		{\large \ttfamily \textbf{-l}} & Only count lines
+	\end{tabular}
 	\item[grep] Print lines matching a pattern
+	\item
+	\begin{tabular}{cl}
+		{\large \ttfamily \textbf{-i}} & Ignore case sensitivity \\
+		{\large \ttfamily \textbf{-v}} & Show non-matching lines
+	\end{tabular}
+	\item[head] Output first part of a file
+	\item[tail] Output last part of a file
+	\item[tee] Write stdin to file \emph{and} to stdout
+	\item[|] Pipe stdout to stdin
+	\item[>] Redirect (and overwrite) stdout
+	\item[>>] Redirect (and append) stdout 
+	\item[2>] Redirect stderr (standard error)
 \end{description}
 
 \end{multicols}
+
+\begin{center}
+	\Huge \textsc{Work in progress...}
+\end{center}
 \end{document}
