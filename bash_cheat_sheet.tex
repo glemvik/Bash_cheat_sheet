@@ -12,9 +12,10 @@
 \usepackage{mathtools}			% Fixes a few AMS bugs
 \usepackage{hyperref}			% For \href{URL}{text}
 \usepackage[margin=1.5cm,landscape]{geometry} % For margins and orientation
+\usepackage[sharp]{easylist}
 \usepackage{enumitem}
 \usepackage{multicol}
-
+\usepackage{tcolorbox}
 %---------------------------%
 %------ Package setup ------%
 %---------------------------%
@@ -24,6 +25,14 @@
 
 % Style of enumitem
 \renewcommand{\descriptionlabel}[1]{\Large \ttfamily \textbf{#1}}
+
+% Style of tcolorbox
+\newtcbox
+{\mybox}[1][red]{on line,
+	arc=7pt,colback=#1!10!white,colframe=#1!50!black,
+	before upper={\rule[-3pt]{0pt}{10pt}},boxrule=1pt,
+	boxsep=0pt,left=6pt,right=6pt,top=5pt,bottom=3pt}
+
 
 %---------------------------%
 %------ Misc settings ------%
@@ -39,54 +48,118 @@
 \pagestyle{empty}
 
 \begin{center}
-	{\Huge \bfseries \ttfamily Cheat sheet:} \hspace{1em}  \includegraphics[height=2cm]{bash_the_bourne_again_shell}
+	\raisebox{1.4em}{\Huge \bfseries \ttfamily CHEAT SHEET:} \hspace{1em}  \includegraphics[height=2cm]{bash_the_bourne_again_shell}
 \end{center}
-\vspace{1.25em}
+\vspace{0.25em}
 
 \begin{multicols}{3}
-\begin{center}
-	{\Large \bfseries \ttfamily First section} 
-\end{center}
-\vspace{0.5em}
-\hrule
+%\begin{center}
+%	{\Large \bfseries \ttfamily Navigation} 
+%\end{center}
+%\hrule
 
-\begin{description}
-\item[abc] defgh
-\item[abc] defgh
-\item[abc] defgh
+\mybox{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Navigating}}
+
+\begin{description}[nolistsep]
+	\item[pwd] Print working directory
+	\item[cd] Change directory 
+	\item
+	\begin{tabular}{cl}
+		{\large \ttfamily \textbf{$\sim$}} & Home directory \\
+		{\large \ttfamily \textbf{-}} & Previous working directory \\
+		{\large \ttfamily \textbf{$\sim$}\textit{username}} & Home directory of \textit{username}
+	\end{tabular}
 \end{description}
 
-\vfill % Can be removed when cheat sheet has more content
+%\begin{center}
+%	{\Large \bfseries \ttfamily Exploring the system} 
+%\end{center}
+%\hrule
 
-\begin{center}
-	{\Large \bfseries \ttfamily Second section} 
-\end{center}
-\vspace{0.5em}
-\hrule
+\mybox[green]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Exploring}}
 
-\begin{description}
-	\item[abc] defgh
-	\item[abc] defgh
-	\item[abc] defgh
+\begin{description}[nolistsep]
+	\item[ls] List directory contents
+	\item
+	\begin{tabular}{cl}
+		{\large \ttfamily \textbf{-a}} & Include hidden content \\
+		{\large \ttfamily \textbf{-h}} & Human readable format\\
+		{\large \ttfamily \textbf{-i}} & Show inode number\\
+		{\large \ttfamily \textbf{-l}} & Long format \\
+		{\large \ttfamily \textbf{-r}} & Reverse order \\
+		{\large \ttfamily \textbf{-S}} & Sort by file size \\
+		{\large \ttfamily \textbf{-t}} & Sort by modification time\\
+	\end{tabular}
+	\item[file] Determine a file's type
+	\item[less] Show file
 \end{description}
 
-\vfill % Can be removed when cheat sheet has more content
 
-\begin{center}
-	{\Large \bfseries \ttfamily Third section} 
-\end{center}
-\vspace{0.5em}
-\hrule
+%\begin{center}
+%	{\Large \bfseries \ttfamily Manipulating files and directories} 
+%\end{center}
+%\hrule
 
-\begin{description}
-	\item[abc] defgh
-	\item[abc] defgh
-	\item[abc] defgh
+\mybox[blue]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Manipulating}}
+
+\begin{description}[nolistsep]
+	\item[cp] Copy files and directories
+	\item
+	\begin{tabular}{cl}
+		{\large \ttfamily \textbf{-a}} & All attributes, ownerships, permissions \\
+		{\large \ttfamily \textbf{-i}} & Prompt for confirmation (interactive)\\
+		{\large \ttfamily \textbf{-r}} & Recursive \\
+		{\large \ttfamily \textbf{-u}} & Only copy new/newer files (update) \\
+		{\large \ttfamily \textbf{-v}} & Show informative messages (verbose)\\
+	\end{tabular}
+	\item[mv] Move/rename files and directories
+	\item
+	\begin{tabular}{l}
+		see \texttt{\textbf{cp}}: \texttt{\textbf{-i}}, \texttt{\textbf{-u}}, \texttt{\textbf{-v}}
+	\end{tabular}
+	\item[mkdir] Create directories
+	\item[rm] Remove files and directories
+	\item
+	\begin{tabular}{cl}
+		{\large \ttfamily \textbf{-f}} & Ignore nonexisting files, don't prompt
+	\end{tabular}
+	\item
+	\begin{tabular}{l}
+		see \texttt{\textbf{cp}}: \texttt{\textbf{-i}}, \texttt{\textbf{-r}}, \texttt{\textbf{-v}}
+	\end{tabular}
+	\item[ln] Create hard and symbolic links
+	\item
+	\begin{tabular}{cl}
+		{\large \ttfamily \textbf{-s}} & Symbolic link
+	\end{tabular}
 \end{description}
 
-\hfill % Can be removed when cheat sheet has more content
+\mybox[yellow]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Wildcards}}
+
+\begin{description}[nolistsep]
+	\item[*] Any characters
+	\item[?] Any single character
+	\item[{[\large \textit{chars}}{\Large]}] Any character from \textit{chars}
+	\item[{[\large!\textit{chars}}{\Large]}] Any character not from \textit{chars}
+	\item[{[\large:\textit{class}:}{\Large]}] Any character from \textit{class}
+\end{description}
+
+\mybox[purple]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Misc}}
+
+\begin{description}[nolistsep]
+	\item[which] Show program to be executed
+	\item[man] Show command manual page
+	\item[apropos] List appropriate commands
+	\item[info] Show information about command
+	\item[whatis] Brief description of command
+	\item[alias] Create alias for command
+\end{description}
+
+\mybox[orange]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Redirecting}}
+
+\begin{description}[nolistsep]
+	\item[grep] Print lines matching a pattern
+\end{description}
 
 \end{multicols}
 \end{document}
-
-
