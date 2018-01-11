@@ -1,4 +1,3 @@
-
 %---------------------------%
 %----- Package imports -----%
 %---------------------------%
@@ -11,7 +10,7 @@
 	amsthm, amsfonts, amssymb}
 \usepackage{mathtools}			% Fixes a few AMS bugs
 \usepackage{hyperref}			% For \href{URL}{text}
-\usepackage[margin=1.5cm,landscape]{geometry} % For margins and orientation
+\usepackage[top=0.75cm, bottom=1.25cm, left=1.25cm, right=1.25cm, landscape]{geometry} % For margins and orientation
 \usepackage[sharp]{easylist}
 \usepackage{enumitem}
 \usepackage{multicol}
@@ -92,6 +91,12 @@
 	\end{tabular}
 	\item[file] Determine a file's type
 	\item[less] Show file
+	\item[tree] Recursive  directory listing
+	\item
+	\begin{tabular}{cl}
+		{\large \ttfamily \textbf{-L}} & Level of depth \\
+		{\large \ttfamily \textbf{-d}} & Directories only\\
+	\end{tabular}
 \end{description}
 
 
@@ -118,6 +123,7 @@
 		see \texttt{\textbf{cp}}: \texttt{\textbf{-i}}, \texttt{\textbf{-u}}, \texttt{\textbf{-v}}
 	\end{tabular}
 	\item[mkdir] Create directories
+	\item[touch] Create file (or modify accessed time)
 	\item[rm] Remove files and directories
 	\item
 	\begin{tabular}{cl}
@@ -160,10 +166,15 @@
 \begin{description}[nolistsep]
 	\item[cat] Concatenate files
 	\item[sort] Sort lines of text
+	\item
+	\begin{tabular}{cl}
+		{\large \ttfamily \textbf{-h}} & Human numeric sort
+	\end{tabular}
 	\item[uniq] Report or omit repeated lines
 	\item
 	\begin{tabular}{cl}
-		{\large \ttfamily \textbf{-d}} & Show duplicates
+		{\large \ttfamily \textbf{-d}} & Show duplicates \\
+		{\large \ttfamily \textbf{-c}} & Count occurrences
 	\end{tabular}
 	\item[wc] Newline, word and byte counts for each file
 	\item
@@ -174,11 +185,20 @@
 	\item
 	\begin{tabular}{cl}
 		{\large \ttfamily \textbf{-i}} & Ignore case sensitivity \\
+		{\large \ttfamily \textbf{-n}} & Number the lines \\
+		{\large \ttfamily \textbf{-c}} & Count occurences \\
+		{\large \ttfamily \textbf{-r}} & Recursively search \\
 		{\large \ttfamily \textbf{-v}} & Show non-matching lines
 	\end{tabular}
 	\item[head] Output first part of a file
 	\item[tail] Output last part of a file
 	\item[tee] Write stdin to file \emph{and} to stdout
+	\item[xargs] Pipe args to command (e.g. from file)
+\end{description}
+
+\mybox[gray]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Operators}}
+
+\begin{description}[nolistsep]
 	\item[|] Pipe stdout to stdin
 	\item[>] Redirect (and overwrite) stdout
 	\item[>>] Redirect (and append) stdout 

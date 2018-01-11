@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.1.5)  9 JAN 2018 17:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.24)  11 JAN 2018 19:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1037,15 +1037,15 @@ LaTeX Info: Redefining \nameref on input line 47.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: landscape 
-* h-part:(L,W,R)=(42.67912pt, 759.6886pt, 42.67912pt)
-* v-part:(T,H,B)=(42.67912pt, 512.14963pt, 42.67912pt)
+* h-part:(L,W,R)=(35.56593pt, 773.91498pt, 35.56593pt)
+* v-part:(T,H,B)=(21.33955pt, 540.60239pt, 35.56593pt)
 * \paperwidth=845.04684pt
 * \paperheight=597.50787pt
-* \textwidth=759.6886pt
-* \textheight=512.14963pt
-* \oddsidemargin=-29.59087pt
-* \evensidemargin=-29.59087pt
-* \topmargin=-66.59087pt
+* \textwidth=773.91498pt
+* \textheight=540.60239pt
+* \oddsidemargin=-36.70406pt
+* \evensidemargin=-36.70406pt
+* \topmargin=-87.93044pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
@@ -1088,34 +1088,30 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 68.
-
-Overfull \hbox (4.37152pt too wide) in paragraph at lines 67--72
-[][] 
- []
-
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 118.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 124.
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/it' in size <14.4> not available
-(Font)              Font shape `OT1/cmtt/m/it' tried instead on input line 142.
+(Font)              Font shape `OT1/cmtt/m/it' tried instead on input line 149.
 
-[1
+ [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./figures/bash_the_bourne_
 again_shell.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 193.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 193.
- (./bash_cheat_sheet.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 193.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 193.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 214.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 214.
+
+(./bash_cheat_sheet.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 214.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 214.
 Package rerunfilecheck Info: File `bash_cheat_sheet.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 193.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 214.
  ) 
 Here is how much of TeX's memory you used:
- 17753 strings out of 493029
- 317082 string characters out of 6136235
- 429914 words of memory out of 5000000
- 20985 multiletter control sequences out of 15000+600000
+ 17755 strings out of 493029
+ 317114 string characters out of 6136234
+ 433942 words of memory out of 5000000
+ 20987 multiletter control sequences out of 15000+600000
  13948 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,9n,73p,935b,525s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1125,7 +1121,7 @@ are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on bash_cheat_sheet.pdf (1 page, 66162 bytes).
+Output written on bash_cheat_sheet.pdf (1 page, 66742 bytes).
 PDF statistics:
  43 PDF objects out of 1000 (max. 8388607)
  31 compressed objects within 1 object stream
