@@ -53,10 +53,6 @@
 \vspace{0.25em}
 
 \begin{multicols}{3}
-%\begin{center}
-%	{\Large \bfseries \ttfamily Navigation} 
-%\end{center}
-%\hrule
 
 \mybox{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Navigating}}
 
@@ -70,11 +66,6 @@
 		{\large \ttfamily \textbf{$\sim$}\textit{username}} & Home directory of \textit{username}
 	\end{tabular}
 \end{description}
-
-%\begin{center}
-%	{\Large \bfseries \ttfamily Exploring the system} 
-%\end{center}
-%\hrule
 
 \mybox[green]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Exploring}}
 
@@ -93,12 +84,6 @@
 	\item[file] Determine a file's type
 	\item[less] Show file
 \end{description}
-
-
-%\begin{center}
-%	{\Large \bfseries \ttfamily Manipulating files and directories} 
-%\end{center}
-%\hrule
 
 \mybox[blue]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Manipulating}}
 
@@ -147,6 +132,7 @@
 \mybox[purple]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Misc}}
 
 \begin{description}[nolistsep]
+	\item[echo] Display a line of text
 	\item[which] Show program to be executed
 	\item[man] Show command manual page
 	\item[apropos] List appropriate commands
@@ -184,6 +170,17 @@
 	\item[>>] Redirect (and append) stdout 
 	\item[2>] Redirect stderr (standard error)
 \end{description}
+
+\mybox[pink]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Expanding}}
+
+\begin{description}[nolistsep]
+	\item[\$({\large \textit{command}})] \textit{Command} output as expansion
+	\item[\$(({\large \textit{expression}}))] Arithmetic expression 
+	\item[\{a,b,c\}] Create multiple strings 'a' 'b' 'c' 
+	\item[\{a..z\}] Create multiple strings 'a' to 'z'
+\end{description}
+
+
 
 \end{multicols}
 
