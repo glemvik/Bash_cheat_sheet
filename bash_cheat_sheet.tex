@@ -23,7 +23,7 @@
 \graphicspath{{figures/}}
 
 % Style of enumitem
-\renewcommand{\descriptionlabel}[1]{\Large \ttfamily \textbf{#1}}
+\renewcommand{\descriptionlabel}[1]{\large \ttfamily \textbf{#1}}
 
 % Style of tcolorbox
 \newtcbox
@@ -49,7 +49,7 @@
 \begin{center}
 	\raisebox{1.4em}{\Huge \bfseries \ttfamily CHEAT SHEET:} \hspace{1em}  \includegraphics[height=2cm]{bash_the_bourne_again_shell}
 \end{center}
-\vspace{0.25em}
+%\vspace{0.25em}
 
 \begin{multicols}{3}
 
@@ -64,30 +64,9 @@
 		{\large \ttfamily \textbf{-}} & Previous working directory \\
 		{\large \ttfamily \textbf{$\sim$}\textit{username}} & Home directory of \textit{username}
 	\end{tabular}
-\end{description}
-
-\mybox[green]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Exploring}}
-
-\begin{description}[nolistsep]
-	\item[ls] List directory contents
-	\item
-	\begin{tabular}{cl}
-		{\large \ttfamily \textbf{-a}} & Include hidden content \\
-		{\large \ttfamily \textbf{-h}} & Human readable format\\
-		{\large \ttfamily \textbf{-i}} & Show inode number\\
-		{\large \ttfamily \textbf{-l}} & Long format \\
-		{\large \ttfamily \textbf{-r}} & Reverse order \\
-		{\large \ttfamily \textbf{-S}} & Sort by file size \\
-		{\large \ttfamily \textbf{-t}} & Sort by modification time\\
-	\end{tabular}
-	\item[file] Determine a file's type
-	\item[less] Show file
-	\item[tree] Recursive  directory listing
-	\item
-	\begin{tabular}{cl}
-		{\large \ttfamily \textbf{-L}} & Level of depth \\
-		{\large \ttfamily \textbf{-d}} & Directories only\\
-	\end{tabular}
+	\item[ctrl-A] Move cursor to beginning of line
+	\item[ctrl-E] Move cursor to end of line
+	\item[ctrl-L] Clear the screen (same as \textbf{\textit{clear}})
 \end{description}
 
 \mybox[blue]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Manipulating}}
@@ -125,6 +104,31 @@
 	\end{tabular}
 \end{description}
 
+\mybox[gray]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Exploring}}
+
+\begin{description}[nolistsep]
+	\item[ls] List directory contents
+	\item
+	\begin{tabular}{cl}
+		{\large \ttfamily \textbf{-a}} & Include hidden content \\
+		{\large \ttfamily \textbf{-h}} & Human readable format\\
+		{\large \ttfamily \textbf{-i}} & Show inode number\\
+		{\large \ttfamily \textbf{-l}} & Long format \\
+		{\large \ttfamily \textbf{-r}} & Reverse order \\
+		{\large \ttfamily \textbf{-S}} & Sort by file size \\
+		{\large \ttfamily \textbf{-t}} & Sort by modification time\\
+	\end{tabular}
+	\item[file] Determine a file's type
+	\item[less] Show file
+	\item[tree] Recursive  directory listing
+	\item
+	\begin{tabular}{cl}
+		{\large \ttfamily \textbf{-L}} & Level of depth \\
+		{\large \ttfamily \textbf{-d}} & Directories only\\
+	\end{tabular}
+\end{description}
+
+
 \mybox[yellow]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Wildcards}}
 
 \begin{description}[nolistsep]
@@ -145,6 +149,13 @@
 	\item[info] Show information about command
 	\item[whatis] Brief description of command
 	\item[alias] Create alias for command
+	\item[history] Show last 500 (default) commands
+%	\item[!\textit{index}] Reuse \textit{index} command from \texttt{\textbf{history}}
+	\item
+	\begin{tabular}{cl}
+		{\large \ttfamily \textbf{!\textit{index}}} & Reuse \textit{index} command from \texttt{\textbf{history}}\\
+		{\large \ttfamily \textbf{ctrl-R}} & Reverse incremental search \\
+	\end{tabular}
 \end{description}
 
 \mybox[orange]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Redirecting}}
@@ -182,7 +193,7 @@
 	\item[xargs] Pipe args to command (e.g. from file)
 \end{description}
 
-\mybox[gray]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Operators}}
+\mybox[green]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Operators}}
 
 \begin{description}[nolistsep]
 	\item[|] Pipe stdout to stdin
