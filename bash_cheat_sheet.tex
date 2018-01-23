@@ -44,178 +44,203 @@
 %------ Document start -----%
 %---------------------------%
 \begin{document}
-\pagestyle{empty}
-
-\begin{center}
-	\raisebox{1.4em}{\Huge \bfseries \ttfamily CHEAT SHEET:} \hspace{1em}  \includegraphics[height=2cm]{bash_the_bourne_again_shell}
-\end{center}
-%\vspace{0.25em}
-
-\begin{multicols}{3}
-
-\mybox{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Navigating}}
-
-\begin{description}[nolistsep]
-	\item[pwd] Print working directory
-	\item[cd] Change directory 
-	\item
-	\begin{tabular}{cl}
-		{\large \ttfamily \textbf{$\sim$}} & Home directory \\
-		{\large \ttfamily \textbf{-}} & Previous working directory \\
-		{\large \ttfamily \textbf{$\sim$}\textit{username}} & Home directory of \textit{username}
-	\end{tabular}
-	\item[ctrl-A] Move cursor to beginning of line
-	\item[ctrl-E] Move cursor to end of line
-	\item[ctrl-L] Clear the screen (same as \textbf{\textit{clear}})
-\end{description}
-
-\mybox[blue]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Manipulating}}
-
-\begin{description}[nolistsep]
-	\item[cp] Copy files and directories
-	\item
-	\begin{tabular}{cl}
-		{\large \ttfamily \textbf{-a}} & All attributes, ownerships, permissions \\
-		{\large \ttfamily \textbf{-i}} & Prompt for confirmation (interactive)\\
-		{\large \ttfamily \textbf{-r}} & Recursive \\
-		{\large \ttfamily \textbf{-u}} & Only copy new/newer files (update) \\
-		{\large \ttfamily \textbf{-v}} & Show informative messages (verbose)\\
-	\end{tabular}
-	\item[mv] Move/rename files and directories
-	\item
-	\begin{tabular}{l}
-		see \texttt{\textbf{cp}}: \texttt{\textbf{-i}}, \texttt{\textbf{-u}}, \texttt{\textbf{-v}}
-	\end{tabular}
-	\item[mkdir] Create directories
-	\item[touch] Create file (or modify accessed time)
-	\item[rm] Remove files and directories
-	\item
-	\begin{tabular}{cl}
-		{\large \ttfamily \textbf{-f}} & Ignore nonexisting files, don't prompt
-	\end{tabular}
-	\item
-	\begin{tabular}{l}
-		see \texttt{\textbf{cp}}: \texttt{\textbf{-i}}, \texttt{\textbf{-r}}, \texttt{\textbf{-v}}
-	\end{tabular}
-	\item[ln] Create hard and symbolic links
-	\item
-	\begin{tabular}{cl}
-		{\large \ttfamily \textbf{-s}} & Symbolic link
-	\end{tabular}
-\end{description}
-
-\mybox[gray]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Exploring}}
-
-\begin{description}[nolistsep]
-	\item[ls] List directory contents
-	\item
-	\begin{tabular}{cl}
-		{\large \ttfamily \textbf{-a}} & Include hidden content \\
-		{\large \ttfamily \textbf{-h}} & Human readable format\\
-		{\large \ttfamily \textbf{-i}} & Show inode number\\
-		{\large \ttfamily \textbf{-l}} & Long format \\
-		{\large \ttfamily \textbf{-r}} & Reverse order \\
-		{\large \ttfamily \textbf{-S}} & Sort by file size \\
-		{\large \ttfamily \textbf{-t}} & Sort by modification time\\
-	\end{tabular}
-	\item[file] Determine a file's type
-	\item[less] Show file
-	\item[tree] Recursive  directory listing
-	\item
-	\begin{tabular}{cl}
-		{\large \ttfamily \textbf{-L}} & Level of depth \\
-		{\large \ttfamily \textbf{-d}} & Directories only\\
-	\end{tabular}
-\end{description}
-
-
-\mybox[yellow]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Wildcards}}
-
-\begin{description}[nolistsep]
-	\item[*] Any characters
-	\item[?] Any single character
-	\item[{[\large \textit{chars}}{\Large]}] Any character from \textit{chars}
-	\item[{[\large!\textit{chars}}{\Large]}] Any character not from \textit{chars}
-	\item[{[\large:\textit{class}:}{\Large]}] Any character from \textit{class}
-\end{description}
-
-\mybox[purple]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Misc}}
-
-\begin{description}[nolistsep]
-	\item[echo] Display a line of text
-	\item[which] Show program to be executed
-	\item[man] Show command manual page
-	\item[apropos] List appropriate commands
-	\item[info] Show information about command
-	\item[whatis] Brief description of command
-	\item[alias] Create alias for command
-	\item[history] Show last 500 (default) commands
-%	\item[!\textit{index}] Reuse \textit{index} command from \texttt{\textbf{history}}
-	\item
-	\begin{tabular}{cl}
-		{\large \ttfamily \textbf{!\textit{index}}} & Reuse \textit{index} command from \texttt{\textbf{history}}\\
-		{\large \ttfamily \textbf{ctrl-R}} & Reverse incremental search \\
-	\end{tabular}
-\end{description}
-
-\mybox[orange]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Redirecting}}
-
-\begin{description}[nolistsep]
-	\item[cat] Concatenate files
-	\item[sort] Sort lines of text
-	\item
-	\begin{tabular}{cl}
-		{\large \ttfamily \textbf{-h}} & Human numeric sort
-	\end{tabular}
-	\item[uniq] Report or omit repeated lines
-	\item
-	\begin{tabular}{cl}
-		{\large \ttfamily \textbf{-d}} & Show duplicates \\
-		{\large \ttfamily \textbf{-c}} & Count occurrences
-	\end{tabular}
-	\item[wc] Newline, word and byte counts for each file
-	\item
-	\begin{tabular}{cl}
-		{\large \ttfamily \textbf{-l}} & Only count lines
-	\end{tabular}
-	\item[grep] Print lines matching a pattern
-	\item
-	\begin{tabular}{cl}
-		{\large \ttfamily \textbf{-i}} & Ignore case sensitivity \\
-		{\large \ttfamily \textbf{-n}} & Number the lines \\
-		{\large \ttfamily \textbf{-c}} & Count occurences \\
-		{\large \ttfamily \textbf{-r}} & Recursively search \\
-		{\large \ttfamily \textbf{-v}} & Show non-matching lines
-	\end{tabular}
-	\item[head] Output first part of a file
-	\item[tail] Output last part of a file
-	\item[tee] Write stdin to file \emph{and} to stdout
-	\item[xargs] Pipe args to command (e.g. from file)
-\end{description}
-
-\mybox[green]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Operators}}
-
-\begin{description}[nolistsep]
-	\item[|] Pipe stdout to stdin
-	\item[>] Redirect (and overwrite) stdout
-	\item[>>] Redirect (and append) stdout 
-	\item[2>] Redirect stderr (standard error)
-\end{description}
-
-\mybox[pink]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Expanding}}
-
-\begin{description}[nolistsep]
-	\item[\$({\large \textit{command}})] \textit{Command} output as expansion
-	\item[\$(({\large \textit{expression}}))] Arithmetic expression 
-	\item[\{a,b,c\}] Create multiple strings 'a' 'b' 'c' 
-	\item[\{a..z\}] Create multiple strings 'a' to 'z'
-\end{description}
-
-
-
-\end{multicols}
-
-\begin{center}
-	\Huge \textsc{Work in progress...}
-\end{center}
+	\pagestyle{empty}
+	
+	\begin{center}
+		\raisebox{1.4em}{\Huge \bfseries \ttfamily CHEAT SHEET:} \hspace{1em}  \includegraphics[height=2cm]{bash_the_bourne_again_shell}
+	\end{center}
+	%\vspace{0.25em}
+	
+	
+	\begin{multicols}{3}
+		
+		\mybox{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Navigating}}
+		
+		\begin{description}[nolistsep]
+			\item[pwd] Print working directory
+			\item[cd] Change directory 
+			\item
+			\begin{tabular}{cl}
+				{\large \ttfamily \textbf{$\sim$}} & Home directory \\
+				{\large \ttfamily \textbf{-}} & Previous working directory \\
+				{\large \ttfamily \textbf{$\sim$}\textit{username}} & Home directory of \textit{username}
+			\end{tabular}
+			\item[ctrl-A] Move cursor to beginning of line
+			\item[ctrl-E] Move cursor to end of line
+			\item[ctrl-L] Clear the screen (same as \textbf{\textit{clear}})
+		\end{description}
+		
+		\mybox[blue]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Manipulating}}
+		
+		\begin{description}[nolistsep]
+			\item[cp] Copy files and directories
+			\item
+			\begin{tabular}{cl}
+				{\large \ttfamily \textbf{-a}} & All attributes, ownerships, permissions \\
+				{\large \ttfamily \textbf{-i}} & Prompt for confirmation (interactive)\\
+				{\large \ttfamily \textbf{-r}} & Recursive \\
+				{\large \ttfamily \textbf{-u}} & Only copy new/newer files (update) \\
+				{\large \ttfamily \textbf{-v}} & Show informative messages (verbose)\\
+			\end{tabular}
+			\item[mv] Move/rename files and directories
+			\item
+			\begin{tabular}{l}
+				see \texttt{\textbf{cp}}: \texttt{\textbf{-i}}, \texttt{\textbf{-u}}, \texttt{\textbf{-v}}
+			\end{tabular}
+			\item[mkdir] Create directories
+			\item[touch] Create file (or modify accessed time)
+			\item[rm] Remove files and directories
+			\item
+			\begin{tabular}{cl}
+				{\large \ttfamily \textbf{-f}} & Ignore nonexisting files, don't prompt
+			\end{tabular}
+			\item
+			\begin{tabular}{l}
+				see \texttt{\textbf{cp}}: \texttt{\textbf{-i}}, \texttt{\textbf{-r}}, \texttt{\textbf{-v}}
+			\end{tabular}
+			\item[ln] Create hard and symbolic links
+			\item
+			\begin{tabular}{cl}
+				{\large \ttfamily \textbf{-s}} & Symbolic link
+			\end{tabular}
+		\end{description}
+		
+		\mybox[gray]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Exploring}}
+		
+		\begin{description}[nolistsep]
+			\item[ls] List directory contents
+			\item
+			\begin{tabular}{cl}
+				{\large \ttfamily \textbf{-a}} & Include hidden content \\
+				{\large \ttfamily \textbf{-h}} & Human readable format\\
+				{\large \ttfamily \textbf{-i}} & Show inode number\\
+				{\large \ttfamily \textbf{-l}} & Long format \\
+				{\large \ttfamily \textbf{-r}} & Reverse order \\
+				{\large \ttfamily \textbf{-S}} & Sort by file size \\
+				{\large \ttfamily \textbf{-t}} & Sort by modification time\\
+			\end{tabular}
+			\item[file] Determine a file's type
+			\item[less] Show file
+			\item[tree] Recursive  directory listing
+			\item
+			\begin{tabular}{cl}
+				{\large \ttfamily \textbf{-L}} & Level of depth \\
+				{\large \ttfamily \textbf{-d}} & Directories only\\
+			\end{tabular}
+		\end{description}
+		
+		
+		\mybox[yellow]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Wildcards}}
+		
+		\begin{description}[nolistsep]
+			\item[*] Any characters
+			\item[?] Any single character
+			\item[{[\large \textit{chars}}{\Large]}] Any character from \textit{chars}
+			\item[{[\large!\textit{chars}}{\Large]}] Any character not from \textit{chars}
+			\item[{[\large:\textit{class}:}{\Large]}] Any character from \textit{class}
+		\end{description}
+		
+		\mybox[purple]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Misc}}
+		
+		\begin{description}[nolistsep]
+			\item[echo] Display a line of text
+			\item[which] Show program to be executed
+			\item[man] Show command manual page
+			\item[apropos] List appropriate commands
+			\item[info] Show information about command
+			\item[whatis] Brief description of command
+			\item[alias] Create alias for command
+			\item[history] Show last 500 (default) commands
+			%	\item[!\textit{index}] Reuse \textit{index} command from \texttt{\textbf{history}}
+			\item
+			\begin{tabular}{cl}
+				{\large \ttfamily \textbf{!\textit{index}}} & Reuse \textit{index} command from \texttt{\textbf{history}}\\
+				{\large \ttfamily \textbf{ctrl-R}} & Reverse incremental search \\
+			\end{tabular}
+		\end{description}
+		
+		\mybox[orange]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Redirecting}}
+		
+		\begin{description}[nolistsep]
+			\item[cat] Concatenate files
+			\item[sort] Sort lines of text
+			\item
+			\begin{tabular}{cl}
+				{\large \ttfamily \textbf{-h}} & Human numeric sort
+			\end{tabular}
+			\item[uniq] Report or omit repeated lines
+			\item
+			\begin{tabular}{cl}
+				{\large \ttfamily \textbf{-d}} & Show duplicates \\
+				{\large \ttfamily \textbf{-c}} & Count occurrences
+			\end{tabular}
+			\item[wc] Newline, word and byte counts for each file
+			\item
+			\begin{tabular}{cl}
+				{\large \ttfamily \textbf{-l}} & Only count lines
+			\end{tabular}
+			\item[grep] Print lines matching a pattern
+			\item
+			\begin{tabular}{cl}
+				{\large \ttfamily \textbf{-i}} & Ignore case sensitivity \\
+				{\large \ttfamily \textbf{-n}} & Number the lines \\
+				{\large \ttfamily \textbf{-c}} & Count occurences \\
+				{\large \ttfamily \textbf{-r}} & Recursively search \\
+				{\large \ttfamily \textbf{-v}} & Show non-matching lines
+			\end{tabular}
+			\item[head] Output first part of a file
+			\item[tail] Output last part of a file
+			\item[tee] Write stdin to file \emph{and} to stdout
+			\item[xargs] Pipe args to command (e.g. from file)
+		\end{description}
+		
+		\mybox[green]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Operators}}
+		
+		\begin{description}[nolistsep]
+			\item[|] Pipe stdout to stdin
+			\item[>] Redirect (and overwrite) stdout
+			\item[>>] Redirect (and append) stdout 
+			\item[2>] Redirect stderr (standard error)
+		\end{description}
+		
+		\mybox[pink]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Expanding}}
+		
+		\begin{description}[nolistsep]
+			\item[\$({\large \textit{command}})] \textit{Command} output as expansion
+			\item[\$(({\large \textit{expression}}))] Arithmetic expression 
+			\item[\{a,b,c\}] Create multiple strings 'a' 'b' 'c' 
+			\item[\{a..z\}] Create multiple strings 'a' to 'z'
+		\end{description}
+		
+		\mybox[brown]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Permissions}}
+		
+		\begin{description}[nolistsep]
+			\item[id] Display user identity
+			\item[chmod] Change a file's mode
+			\item
+			\begin{tabular}{cl}
+				{\large \ttfamily \textbf{u+r}} & Add read to user \\
+				{\large \ttfamily \textbf{g-w}} & Remove write from group \\
+				{\large \ttfamily \textbf{o=x}} & Set execute for other (world) \\
+			\end{tabular}
+			\item[umask] Set the default file permissions
+			\item
+			\begin{tabular}{cl}
+				{\large \ttfamily \textbf{002}} & Remove write from world (010) \\
+				{\large \ttfamily \textbf{022}} & Remove write from group and world (010) \\
+			\end{tabular}
+			\item[chown] Change a file's owner (and group owner)
+			\item
+			\begin{tabular}{cl}
+				{\large \ttfamily \textbf{user}} & Change owner to \textit{user} \\
+				{\large \ttfamily \textbf{:group}} & Change group owner to \textit{group} \\
+			\end{tabular}
+		\end{description}
+		
+		
+	\end{multicols}
+	
+	\begin{center}
+		\Huge \textsc{Work in progress...}
+	\end{center}
 \end{document}
