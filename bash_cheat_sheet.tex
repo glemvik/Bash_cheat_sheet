@@ -238,6 +238,24 @@
 		\end{description}
 		
 		
+		\mybox[blue]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Processes}}
+		
+		\begin{description}[nolistsep]
+			\item[ps] Report a snapshot of current processes 
+			\item[top] Show ``top'' processes (dynamically)
+			\item[jobs] List job launched from current terminal
+			\item[\textit{program} \&] Launch \textit{program} in background
+			\item[bg \%\textit{jobspec}] Move process to background
+			\item[fg \%\textit{jobspec}] Return process to foreground
+			\item[ctrl-Z] Stop current process (w/o terminate)
+			\item[kill \textit{PID}] Signals \textit{PID} to terminate
+			\begin{tabular}{cl}
+				{\large \ttfamily \textbf{-1}} & Signals for hangup \\
+				{\large \ttfamily \textbf{-2}} & Signals for interruption (ctrl-C)\\
+				{\large \ttfamily \textbf{-9}} & Kills without cleanup
+			\end{tabular}
+			\item[killall \textit{name}] Signal all \textit{name}-processes
+		\end{description}
 	\end{multicols}
 	
 	\begin{center}
