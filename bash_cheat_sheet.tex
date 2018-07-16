@@ -68,6 +68,7 @@
 			\item[ctrl-A] Move cursor to beginning of line
 			\item[ctrl-E] Move cursor to end of line
 			\item[ctrl-L] Clear the screen (same as \textbf{\textit{clear}})
+			\item[ctrl-U] Clear current terminal input
 		\end{description}
 		
 		\mybox[blue]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Manipulating}}
@@ -126,6 +127,13 @@
 			\begin{tabular}{cl}
 				{\large \ttfamily \textbf{-L}} & Level of depth \\
 				{\large \ttfamily \textbf{-d}} & Directories only\\
+			\end{tabular}
+			\item[find] Find files and directories
+			\item
+			\begin{tabular}{cl}
+				{\large \ttfamily \textbf{-iname}} & Case insensitive name \\
+				{\large \ttfamily \textbf{-maxdepth}} & Depth to search \\
+				{\large \ttfamily \textbf{-type}} & Files (\texttt{f}), directories (\texttt{d}), $\dots$ \\
 			\end{tabular}
 		\end{description}
 		
@@ -190,6 +198,7 @@
 			\end{tabular}
 			\item[head] Output first part of a file
 			\item[tail] Output last part of a file
+			\item[less] View file contents
 			\item[tee] Write stdin to file \emph{and} to stdout
 			\item[xargs] Pipe args to command (e.g. from file)
 		\end{description}
@@ -197,6 +206,8 @@
 		\mybox[green]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Operators}}
 		
 		\begin{description}[nolistsep]
+			\item[\&\&] Execute commands sequentially
+			\item[\&] Execute commands in parallel
 			\item[|] Pipe stdout to stdin
 			\item[>] Redirect (and overwrite) stdout
 			\item[>>] Redirect (and append) stdout 
