@@ -187,6 +187,7 @@
 			\begin{tabular}{cl}
 				{\large \ttfamily \textbf{-l}} & Only count lines
 			\end{tabular}
+			\item[diff] Compare files line by line
 			\item[grep] Print lines matching a pattern
 			\item
 			\begin{tabular}{cl}
@@ -199,8 +200,24 @@
 			\item[head] Output first part of a file
 			\item[tail] Output last part of a file
 			\item[less] View file contents
+			\item[cut] Filter file contents by columns
 			\item[tee] Write stdin to file \emph{and} to stdout
 			\item[xargs] Pipe args to command (e.g. from file)
+		\end{description}
+		
+		\mybox[cyan]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily The web and networking}}
+		
+		\begin{description}[nolistsep]
+			\item[wget] Download files or entire websites
+			\item
+			\begin{tabular}{cl}
+				{\large \ttfamily \textbf{-r}} & Recursively (\texttt{-l} for depth) \\
+				{\large \ttfamily \textbf{-nc}} & Do not download if it exists \\
+				{\large \ttfamily \textbf{-nd}} & Do not create directories \\
+				{\large \ttfamily \textbf{-A}} & File extensions to download
+			\end{tabular}
+			
+			Using \texttt{-e robots=off} ignores a websites ``recommendations'' and may be helpful for scraping.
 		\end{description}
 		
 		\mybox[green]{\makebox[0.28\textwidth][c]{\Large \bfseries \ttfamily Operators}}
